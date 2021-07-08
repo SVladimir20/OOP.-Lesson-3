@@ -2,6 +2,29 @@
 using namespace std;
 class Card
 {
+public:
+	void setCard_position(bool card_p)
+	{
+		card_position = card_p;
+	}
+	bool getCard_position() const
+	{
+		return card_position;
+	}
+	bool Flip(bool card_p)
+	{
+		if (card_p == false)
+		{
+			card_p = true;
+		}
+		return card_p;
+	}
+	int GetValue()
+	{
+		Card_value card_value = Card_value::Ace;
+		return (int)card_value;
+	}
+
 private:
 	enum class Suit
 	{
