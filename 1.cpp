@@ -7,17 +7,15 @@ public:
 	{
 		return 0;
 	}
-	Figure(double side) : F_side(side) {}
-
-protected:
-	double F_side;
 };
 
 class Parallelogram : public Figure
 {
 public:
+	Parallelogram(double base, double height) : F_base(base), P_height(height) {}
 	double area() override
 	{
+		return F_base * P_height;
 	}
 
 private:
@@ -28,8 +26,10 @@ private:
 class Rectangle : public Figure
 {
 public:
+	Rectangle(double length, double width) : F_length(length), P_width(width) {}
 	double area() override
 	{
+		return F_length * P_width;
 	}
 
 private:
@@ -40,6 +40,7 @@ private:
 class Square : public Figure
 {
 public:
+	Square(double side) : F_side(side) {}
 	double area() override
 	{
 		return F_side * F_side;
@@ -51,8 +52,10 @@ private:
 class Rhombus : public Figure
 {
 public:
+	Rhombus(double base, double height) : F_base(base), P_height(height) {}
 	double area() override
 	{
+		return F_base * P_height;
 	}
 
 private:
